@@ -1,4 +1,28 @@
 @host= http://localhost:4444/products
 ###
-
 GET {{host}}/
+
+###
+POST {{host}}/
+Content-Type: application/json
+
+{
+	"name":"laptop asus",
+	"category":"laptops",
+	"price": 1499.99,
+	"imgURL": "https://intercompras.com/images/product/LENOVO_81D5001ELM.jpg"
+}
+
+###
+GET {{host}}/600f1356df3f633fc0a79ff9
+
+###
+PUT {{host}}/600f1356df3f633fc0a79ff9
+Content-Type: application/json
+
+{
+	"name": "laptop alienware"
+}
+
+###
+DELETE {{host}}/60118c080bb5c04b0ddac2d6

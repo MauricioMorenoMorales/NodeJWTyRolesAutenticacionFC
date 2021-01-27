@@ -1,3 +1,11 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+dotenv.config()
 
-mongoose.connect('mongodb+srv://<username>:<password>@nodejsplatzi.cg57m.mongodb.net/<dbname>?retryWrites=true&w=majority')
+mongoose
+	.connect(
+		`mongodb+srv://${process.env.DBUSERNAME}:${process.env.DBPASSWORD}@nodejsplatzi.cg57m.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`,
+		{ useNewUrlParser: true, useUnifiedTopology: true },
+	)
+	.then(db => console.log('Database is connectad'))
+	.catch(err => console.log(`[Database error] ${err}`))

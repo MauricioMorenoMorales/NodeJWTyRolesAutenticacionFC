@@ -12,6 +12,7 @@ app.set('pkg', pkg)
 
 //middlewares
 app.use(morgan('dev'))
+app.use(express.json())
 
 app.use('/products', productRoutes)
 
