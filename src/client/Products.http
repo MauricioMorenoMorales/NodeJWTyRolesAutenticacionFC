@@ -1,4 +1,4 @@
-@host= http://localhost:4444/products
+@host= http://localhost:4444/api/products
 ###
 GET {{host}}/
 
@@ -21,7 +21,7 @@ PUT {{host}}/600f1356df3f633fc0a79ff9
 Content-Type: application/json
 
 {
-	"name": "laptop alienware"
+	"name": "laptop alienware2"
 }
 
 ###

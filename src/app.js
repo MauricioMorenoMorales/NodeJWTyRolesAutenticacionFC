@@ -3,6 +3,7 @@ import morgan from 'morgan'
 
 import pkg from '../package.json'
 import productRoutes from './routes/products.routes'
+import authRoutes from './routes/auth.routes'
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.set('pkg', pkg)
 app.use(morgan('dev'))
 app.use(express.json())
 
-app.use('/products', productRoutes)
+app.use('/api/products', productRoutes)
+app.use('/api/auth', authRoutes)
 
 export default app

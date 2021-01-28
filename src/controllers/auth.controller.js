@@ -1,5 +1,15 @@
 import User from '../models/User.model'
 
-export const signUp = async (req,res) => {}
+export const signUp = async (req, res) => {
+	const {username, email, password, roles} = req.body
+	new User({
+		username,
+		email,
 
-export const signin = async (req,res) => {}
+	})
+	console.log(req.body)
+}
+
+export const signin = async (req, res) => {
+	res.send('signin')
+}
