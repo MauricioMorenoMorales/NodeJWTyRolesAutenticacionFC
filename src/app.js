@@ -5,7 +5,10 @@ import pkg from '../package.json'
 import productRoutes from './routes/products.routes'
 import authRoutes from './routes/auth.routes'
 
+import { createRoles } from './libs/initialSetup'
+
 const app = express()
+createRoles()
 
 //settings
 app.set('port', 4444)

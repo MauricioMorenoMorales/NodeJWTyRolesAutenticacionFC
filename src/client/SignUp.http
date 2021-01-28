@@ -7,7 +7,11 @@ POST {{host}}/
 Content-Type: application/json
 
 {
-	"name":"fazt",
-	"email":"fazt@faztweb.com",
-	"password":"password"
+	"username": "ryan",
+	"email": "ryan@ibm.com",
+	"password": "password",
+	"roles": [
+		"admin",
+		"moderator"
+	]
 }

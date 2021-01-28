@@ -5,7 +5,12 @@ dotenv.config()
 mongoose
 	.connect(
 		`mongodb+srv://${process.env.DBUSERNAME}:${process.env.DBPASSWORD}@nodejsplatzi.cg57m.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`,
-		{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true },
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useFindAndModify: true,
+			useCreateIndex: true,
+		},
 	)
 	.then(db => console.log('Database is connectad'))
 	.catch(err => console.log(`[Database error] ${err}`))
