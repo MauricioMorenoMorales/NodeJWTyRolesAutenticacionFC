@@ -7,8 +7,8 @@ POST {{host}}/
 Content-Type: application/json
 
 {
-	"username": "ryan",
-	"email": "ryan@ibm.com",
+	"username": "joe mcmillan",
+	"email": "joemacmillan@ibm.com",
 	"password": "password",
 	"roles": [
 		"admin",

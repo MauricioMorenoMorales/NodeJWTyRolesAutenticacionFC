@@ -8,7 +8,6 @@ POST {{host}}/
 Content-Type: application/json
 
 {
-	"name":"fazt",
-	"email":"fazt@faztweb.com",
+	"email":"joemacmillan@ibm.com",
 	"password":"password"
 }
